@@ -1,5 +1,5 @@
 package work3;
-//Реализовать метод, принимающий в качестве аргумента двумерный целочисленный массив, 
+//Реализовать метод, принимающий в качестве аргумента двумерный целочисленный массив,
 //и зануляющий его диагональные элементы (можете выбрать любую из диагоналей, или занулить обе);
 public class class3 {
 
@@ -12,8 +12,8 @@ public class class3 {
     }
 
     public static void printArray(int[][] array) {
-        for (int[] row : array) {
-            for (int elem : row) {
+        for (int[] stroka : array) {
+            for (int elem : stroka) {
                 System.out.print(elem + " ");
             }
             System.out.println();
