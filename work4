@@ -1,0 +1,30 @@
+package work3;
+//Реализовать метод findMax(int[][] array)
+// который должен найти и вернуть максимальный элемент массива;
+public class classs4
+{
+    public static int findMax(int[][] array) {
+
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+        }
+
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[][] massiv = {
+                {1, 2, 13},
+                {4, -5, 6},
+                {-7, 8, 0}
+        };
+
+        int maxElement = findMax(massiv);
+        System.out.println("Максимальная цифра в массиве: " + maxElement);
+    }
+}
