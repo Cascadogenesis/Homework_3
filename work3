@@ -1,0 +1,36 @@
+package work3;
+//Реализовать метод, принимающий в качестве аргумента двумерный целочисленный массив, 
+//и зануляющий его диагональные элементы (можете выбрать любую из диагоналей, или занулить обе);
+public class class3 {
+
+    public static void DiagonalZero(int[][] array) {
+        int size = array.length;
+
+        for (int i = 0; i < size; i++) {
+            array[i][i] = 0;
+        }
+    }
+
+    public static void printArray(int[][] array) {
+        for (int[] row : array) {
+            for (int elem : row) {
+                System.out.print(elem + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] array = {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 1, 1, 2},
+                {3, 4, 5, 6}
+        };
+
+        DiagonalZero(array);
+
+        System.out.println("Превратим одну диагональ в ноль:");
+        printArray(array);
+    }
+}
