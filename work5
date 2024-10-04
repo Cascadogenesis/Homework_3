@@ -1,0 +1,31 @@
+package work3;
+// Реализуйте метод, который считает сумму элементов
+// второй строки двумерного массива, если второй строки не существует,
+// то в качестве результата необходимо вернуть
+public class class5 {
+    public static int summaVtoroyStroki(int[][] massiv) {
+
+        if (massiv == null || massiv.length < 2) {
+            return 0;
+        }
+
+        int summa = 0;
+
+        for (int j = 0; j < massiv[1].length; j++) {
+            summa += massiv[1][j];
+        }
+
+        return summa;
+    }
+
+    public static void main(String[] args) {
+        int[][] massiv = {
+                {8, 2, -8},
+                {-4, 3, 6},
+                {7, 6, -13}
+        };
+
+        int sumaElementov = summaVtoroyStroki(massiv);
+        System.out.println("Сумма элементов второй строки: " + sumaElementov);
+    }
+}
